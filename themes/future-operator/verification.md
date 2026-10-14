@@ -2,6 +2,8 @@
 
 ## Completed
 
+- Widget refinement 65e4264, integrated with remote main 7654de7: full verify passed; 267 app tests with zero failures/errors. Installed via compatible update and visually verified. Smart Search was removed through the launcher UI; the compact neural console was centered and its tap opened the existing assistant conversation.
+
 - `gradlew :app:compileDebugKotlin :app:testDebugUnitTest --tests '*AppNavTest' :app:ktlintCheck -PincludeDevDefaults=false`: passed.
 - Repository `gradlew verify -PincludeDevDefaults=false`: passed after fixing the Windows host persistence fixtures. Includes Android lint, APK assembly, formatting, Android-module unit tests, and included-core checks.
 - Final app unit tests after integrating remote main `165812c`: **256 tests, zero failures/errors**.
@@ -38,6 +40,6 @@ Still to verify: 30-second settling, touch wake, screen-off behavior, Remove ani
 
 ## Artifact identity
 
-APK SHA-256: `c693862e5e4f6d8ecbdd6feec9804dc0152fd2b9a24203ac6d0c2e92f937c66a`
+APK SHA-256: `d9786090303f67c08d7de8f68d7cc23120aa4a54da9cb5df3433e198032ab8f4`
 
 Signing certificate SHA-256: `4209138a13c2bc0ce0c02370931405b15d90ba46121d5a98f93e0031082dc463`

@@ -25,7 +25,7 @@ Android system layouts and third-party app interiors remain controlled by those 
 
 ## Source and build
 
-Assistant changes live in `C:/projects/saravlabs-andorid`, commit `8bd4f5f`, rebased onto `main` commit `165812c`. The newer learning and navigation update is preserved, and the theme styles its shared assistant presence. Approved design: `docs/design/living-midnight.md`. APK and ZIP delivery packages are kept locally; Git contains source, reproducible assets, and setup instructions.
+Assistant changes live in `C:/projects/saravlabs-andorid`, commit `65e4264`, rebased onto `main` commit `7654de7`. The newer learning and navigation update is preserved, and the theme styles its shared assistant presence. Approved design: `docs/design/living-midnight.md`. APK and ZIP delivery packages are kept locally; Git contains source, reproducible assets, and setup instructions.
 
 Run `build.ps1` from this folder to rebuild the package with the repository's Gradle wrapper. Use `build.ps1 -Verify` for its full verify gate. The helper sets Java only for its process and restores the previous value afterwards.
 
@@ -35,7 +35,7 @@ See `verification.md` for the checks actually completed and device checks still 
 
 ## Configured Pixel
 
-Smart Launcher is the default home app. The live wallpaper is applied to home and lock screens, with a centered clock and full-width operator widget below the orb. Home and app drawer use the Midnight icon pack; Messages and the Social folder received manual matching icons. The launcher's sample promotional page was removed. Android uses the first wallpaper-derived blue palette with dark mode, and Gboard uses slate gray with a blue action key. Ringtone, notification, and default alarm use the three original Midnight WAVs; existing alarm schedules were left intact.
+Smart Launcher is the default home app. The live wallpaper is applied to home and lock screens, with a centered clock and slim full-width operator console below the orb. Home and app drawer use the Midnight icon pack; Messages and the Social folder received manual matching icons. The launcher's sample promotional page and Smart Search bar were removed. Android uses the first wallpaper-derived blue palette with dark mode, and Gboard uses slate gray with a blue action key. Ringtone, notification, and default alarm use the three original Midnight WAVs; existing alarm schedules were left intact.
 
 ![Configured home screen](phone-setup.png)
 
