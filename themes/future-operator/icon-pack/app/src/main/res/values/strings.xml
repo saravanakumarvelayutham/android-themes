@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Living Midnight Icons</string>
+    <string name="intro">Twelve original icons in navy, slate and pale blue. Apply Living Midnight Icons from your launcher\'s icon-pack settings. Apps without a matching icon keep their own appearance, or use a launcher-supported themed fallback.</string>
+    <string name="scope">This pack changes launcher icons only. It does not change notifications or app screens, and requests no permissions.</string>
+    <string name="assistant_icon">Assistant</string>
+    <string name="browser_icon">Browser</string>
+    <string name="calendar_icon">Calendar</string>
+    <string name="camera_icon">Camera</string>
+    <string name="files_icon">Files</string>
+    <string name="mail_icon">Mail</string>
+    <string name="maps_icon">Maps</string>
+    <string name="messages_icon">Messages</string>
+    <string name="music_icon">Music</string>
+    <string name="phone_icon">Phone</string>
+    <string name="photos_icon">Photos</string>
+    <string name="settings_icon">Settings</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <category title="Living Midnight" />
+    <item drawable="assistant" />
+    <item drawable="browser" />
+    <item drawable="calendar" />
+    <item drawable="camera" />
+    <item drawable="files" />
+    <item drawable="mail" />
+    <item drawable="maps" />
+    <item drawable="messages" />
+    <item drawable="music" />
+    <item drawable="phone" />
+    <item drawable="photos" />
+    <item drawable="settings" />
+</resources>

@@ -19,11 +19,22 @@ Three existing storage tests initially failed at the first write because the And
 
 The JVM fixtures now use DataStore's public OkioStorage and PreferencesSerializer, exercising real disk persistence and the same repository APIs. Only tests and a test-scoped dependency changed. Phone production storage, serialization semantics, and action policy were not modified. The targeted storage tests and final full verify passed.
 
-## Still to check on the phone
+## Phone setup verified
 
-The build task did not install the APK or apply wallpaper/settings. The connected phone was inspected only for its installed package, signing compatibility, and display size (1080 × 2410). Its temporary APK copy was deleted immediately after checking the certificate.
+On 2026-10-13, the assistant APK was installed with `adb install -r` successfully. Normal launcher startup and the operator intent completed; no current-process crash was observed. Existing assistant conversations and model configuration remained available.
 
-After installation: preview/apply the live wallpaper; verify motion, 30-second settling, touch wake, screen-off behavior, and Remove animations; add/resize the widget and confirm it opens conversation without executing anything; inspect enlarged text and both appearances; exercise a normal operator request, any required approval, and the recorded outcome. Measure battery use before making efficiency claims. Test sound loudness and icon readability on the phone.
+- Android wallpaper state confirms `LivingWallpaperService` with `mWhich=3`, covering home and lock screens. Motion was observed between screenshots.
+- HOME role holder is `ginlemon.flowerfree` (Smart Launcher). Its sample promotional page was removed.
+- `dumpsys appwidget` confirms OperatorWidgetProvider bound to Smart Launcher. It was added through the normal widget picker, resized, and tapped to open the existing conversation.
+- Living Midnight Icons installed successfully. Custom icons were visually verified on home and in the app drawer. Unmapped apps retain original icons on this launcher configuration.
+- Wallpaper & style saved the first home-wallpaper palette with `TONAL_SPOT`, applying it to both screens. Dark appearance remains enabled.
+- Gboard's slate gray theme with blue action key was selected and applied through its Theme screen.
+- Read-back sound defaults resolve to `midnight-ringtone`, `midnight-notification`, and `midnight-alarm`. Existing alarm schedules and volume levels were preserved.
+- Icon pack `assembleDebug` and `lintDebug` passed, with four resource-reference warnings for files consumed by external launchers. It requests no permissions and has no runtime libraries. APK signature verification passed.
+
+## Remaining behavioral checks
+
+Still to verify: 30-second settling, touch wake, screen-off behavior, Remove animations, enlarged text and both appearances, and a normal operator request with any required approval and recorded outcome. No assistant request was submitted merely to test theme setup. Measure battery use before making efficiency claims. Sound defaults are configured; loudness at the user's usual alarm volume remains a user experience check.
 
 ## Artifact identity
 
